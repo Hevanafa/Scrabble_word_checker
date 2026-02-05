@@ -38,5 +38,25 @@ void MainWindow::on_InputEdit_returnPressed()
         return;
     }
 
-    ui->ResultLabel->setText("Found " + term);
+    unsigned int score = 0;
+
+    for (QChar c: std::as_const(term)) {
+        if (QString("AEIOULNSTR").contains(c))
+            score += 1;
+        else if (QString("DG").contains(c))
+            score += 2;
+        else if (QString("BCMP").contains(c))
+            score += 3;
+        else if (QString("FHVWY").contains(c))
+            score += 4;
+        else if (QString("K").contains(c))
+            score += 5;
+        else if (QString("JX").contains(c))
+            score += 8;
+        else if (QString("QZ").contains(c))
+            score += 10;
+    }
+
+    // ui->ResultLabel->setText("Found " + term);
+    ui->ResultLabel->setText(QString("Score: %1").arg(score));
 }
