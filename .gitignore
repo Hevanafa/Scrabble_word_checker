@@ -2,9 +2,11 @@
 build/
 debug/
 release/
+dist/
 
 # Qt Creator files
 *.pro.user
+CMakeLists.txt.user
 
 # Compiled files
 *.o
