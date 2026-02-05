@@ -10,7 +10,12 @@ I made this to get started with cross-platform GUI development in C++
 
 ## Requirements
 
-- [Qt Creator](https://www.qt.io/development/download-open-source) (Qt 18.0.2 at the time of writing)
+- [Qt Creator](https://www.qt.io/development/download-open-source) (Qt Creator 18.0.2, based on Qt 6.10.1 at the time of writing)
+
+## Features
+
+- Performs dictionary check when pressing Enter
+- Shows the base word score, i.e. without multipliers
 
 ## Building
 
