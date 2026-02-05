@@ -22,6 +22,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    QStringList wordlist;
+    QStringList wordlist;  // Basically QList<QString>
 };
 #endif // MAINWINDOW_H

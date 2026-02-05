@@ -31,5 +31,12 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_InputEdit_returnPressed()
 {
-    ui->ResultLabel->setText(ui->InputEdit->text().toUpper().trimmed());
+    QString term = ui->InputEdit->text().toUpper().trimmed();
+
+    if (!wordlist.contains(term)) {
+        ui->ResultLabel->setText("The entry " + term + " was not found");
+        return;
+    }
+
+    ui->ResultLabel->setText("Found " + term);
 }
