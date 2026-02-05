@@ -17,7 +17,11 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_InputEdit_returnPressed();
+
 private:
     Ui::MainWindow *ui;
+    QStringList wordlist;
 };
 #endif // MAINWINDOW_H
